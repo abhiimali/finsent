@@ -23,4 +23,3 @@ plotly==5.19.0
 Requests==2.31.0
 streamlit==1.32.0
 yahoo_fin==0.8.9.1
-
