@@ -17,7 +17,7 @@ from home import home
 st.set_page_config(page_title="Finsent", page_icon=Image.open('statics/stocks.jpg'),layout="wide",initial_sidebar_state="expanded")
 
 
-page = st.sidebar.selectbox("Navigation", ["Home", "Stock Analyze", "Sentiment Analysis", "About Us"])
+page = st.sidebar.selectbox("Navigation", ["Stock Analyze", "Sentiment Analysis", "About Us"])
 
     # Display content based on selected page
    
@@ -283,9 +283,11 @@ def stock_analyse():
             st.plotly_chart(fig_bollinger,use_container_width=True)
             st.write('''***''')
             
-if page == "Home":
+            
+def main():
     home()
-elif page == "Stock Analyze":
+             
+if page == "Stock Analyze":
     stock_analyse()
 if page =="Sentiment Analysis":
     show_sentiment_analysis_page()
