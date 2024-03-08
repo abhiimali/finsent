@@ -17,11 +17,9 @@ from home import home
 st.set_page_config(page_title="Finsent", page_icon=Image.open('statics/stocks.jpg'),layout="wide",initial_sidebar_state="expanded")
 
 
-page = st.sidebar.selectbox("Navigation", ["Stock Analyze", "Sentiment Analysis", "About Us"])
+page = st.sidebar.selectbox("Navigation", ["Home","Stock Analyze", "Sentiment Analysis", "About Us"])
 
-    # Display content based on selected page
-   
-    
+
                 
 #  Main Page
 def stock_analyse():
@@ -284,18 +282,17 @@ def stock_analyse():
             st.write('''***''')
             
             
-def main():
+
+# home()
+if page == "Home":
     home()
-             
 if page == "Stock Analyze":
     stock_analyse()
 if page =="Sentiment Analysis":
     show_sentiment_analysis_page()
 elif page == "About Us":
     show_about_us_page()
-
 elif page == "Analyze Stock":
     stock_analyse() 
 
 
-main()
