@@ -296,3 +296,6 @@ elif page == "About Us":
 
 elif page == "Analyze Stock":
     stock_analyse() 
+
+
+main()
