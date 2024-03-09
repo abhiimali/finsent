@@ -8,20 +8,19 @@ from functions import *
 import datetime
 
 from sentiment import show_sentiment_analysis_page
+# from sentiment import * 
 from about import show_about_us_page
 from home import home
-
+from trendingnews import stock_news
 # from account.user import login ,signup
 from newssummary import news_summary
 # Page Configuration
 st.set_page_config(page_title="Finsent", page_icon=Image.open('statics/stocks.jpg'),layout="wide",initial_sidebar_state="expanded")
 
 
-page = st.sidebar.selectbox("Features", ["Home","Stock Analyze", "Sentiment Analysis", "news_summary" ,"About Us"])
+page = st.sidebar.selectbox("Features", ["Home","Stock Analyze", "Sentiment Analysis", "News Summary" ,"About Us", "Trending News"])
 
- 
-    
-         
+       
 #  Main Page
 
 
@@ -289,15 +288,17 @@ def stock_analyse():
 # home()
 if page == "Home":
     home()
-if page == "Stock Analyze":
+elif page == "Stock Analyze":
     stock_analyse()
-if page =="Sentiment Analysis":
+elif page =="Sentiment Analysis":
     show_sentiment_analysis_page()
-elif page =="news_summary":
+elif page =="News Summary":
     news_summary()
 elif page == "About Us":
     show_about_us_page()
 elif page == "Analyze Stock":
-    stock_analyse() 
+    stock_analyse()
+elif page == "Trending News":
+    stock_news()
 
 

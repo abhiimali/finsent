@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 
 # Define the main function
 def news_summary():
+    print("heyy")
     st.title('Welcome to fiNSHORT')
 
     # Search input on the main page
