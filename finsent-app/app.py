@@ -11,17 +11,20 @@ from sentiment import show_sentiment_analysis_page
 from about import show_about_us_page
 from home import home
 
-
-
+# from account.user import login ,signup
+from newssummary import news_summary
 # Page Configuration
 st.set_page_config(page_title="Finsent", page_icon=Image.open('statics/stocks.jpg'),layout="wide",initial_sidebar_state="expanded")
 
 
-page = st.sidebar.selectbox("Navigation", ["Home","Stock Analyze", "Sentiment Analysis", "About Us"])
+page = st.sidebar.selectbox("Features", ["Home","Stock Analyze", "Sentiment Analysis", "news_summary" ,"About Us"])
 
-
-                
+ 
+    
+         
 #  Main Page
+
+
 def stock_analyse():
     stocks = get_stock_names()
     stock_dict = get_stock_ticker_dict()
@@ -290,6 +293,8 @@ if page == "Stock Analyze":
     stock_analyse()
 if page =="Sentiment Analysis":
     show_sentiment_analysis_page()
+elif page =="news_summary":
+    news_summary()
 elif page == "About Us":
     show_about_us_page()
 elif page == "Analyze Stock":
